@@ -1,0 +1,24 @@
+<p>data-bind works!</p>
+<h1>{{subject}}</h1>
+    <br/>
+
+<h2>
+Demo of Property Binding: Hi name is {{myname}}
+<br/>
+Demo of Attribute Binding : Hello the Batch Code:<input type="text" value="{{urname}}"/>&nbsp; {{urname}}
+<br/>
+Second type of Attribute binding:<input type="text" [value]="urname"/>
+
+<p [class]="hibiscus">Hello this is demo of class binding</p>
+<p [class]="aparajita">Hello this is demo of class binding</p>
+<p [class]="rose">Hello this is demo of class binding</p>
+
+<p [style.color]="leaf">Hello this is demo of style binding</p>
+<p [style.color]="citrus">Hello this is demo of style binding</p>
+
+<br/>
+
+Demo for Event binding<button type="button" (click)="showEvent('abc')">Click here</button>
+<br/>
+Demo for two way attribute binding <input type="text" [(ngModel)]="mycountry"/>&nbsp; {{mycountry}}
+</h2>

@@ -1,0 +1,33 @@
+<h1>Demo of Pipes in Angular</h1>
+
+<h2>The Original Format of Date:{{demodate}}
+<br/>Only date part:{{demodate | date}}
+<br/>in the format od dd-mm-yyyy:{{demodate | date:'dd-mm-yyyy'}}
+<br/>Date with lowercase::{{demodate | date: 'fullDate' | lowercase}}
+<br>{{mysentence}}
+<br>{{mysentence|lowercase}}
+<br>{{mysentence|uppercase}}
+<br/> Sentence in reverse : {{mysentence|reverseSentence}}
+<br>Original Product Price in Indian Currency:{{ productPrice | currency:'INR'}}
+<br>Original Product Price in USA Currency:{{ productPrice | currency}}
+<br>Original Product Price in Euro Currency:{{ productPrice | currency:'EUR'}}
+<br> The Original Stock Value:{{stockValue}}
+<br> Normal Formatted Stock Value : {{stockValue|number}}
+<br> Upto two decimal place Formatted Stock Value: {{stockValue|number:'2.1-2'}}
+<br> The original employee object:{{empObject}}
+<br/> with JSON pipe Employee Object: &nbsp;&nbsp;<pre>{{empObject|json}}</pre>
+<br/>Original Fruit List :{{fruitList}}
+<br/>Display from 3rd to 7th:{{fruitList|slice:2:7}}
+<br/>Display from 2nd to last:{{fruitList|slice:1}}
+<br/>Display last three:{{fruitList|slice:-3}}
+<br/>Display 4th from last, only 2 fruits:{{fruitList|slice:-4:-2}}
+<br>sentence with titlecase{{mysentence|titlecase}}
+<br/><br/>
+Originial number: {{num}}
+<br/>
+number of digits: {{num | digitcount}}
+
+
+
+
+</h2>

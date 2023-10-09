@@ -1,0 +1,98 @@
+<p>direct-app works!</p>
+<h1>demo of Attribute Directives</h1>
+<h2>ngIf example:</h2>
+<div *ngIf="true"><h3>&nbsp;&nbsp;Say Hello, It is attribute Directive</h3></div>
+<div *ngIf="false"><h3>&nbsp;&nbsp;Say Hello, It is also attribute Directive</h3></div>
+
+<h1>Demo Of Structural Directives</h1>
+<h2>ngIfElse example:</h2>
+
+<div *ngIf="answerOne; else answerTwo">
+    <h3>Hello, This is Component Directive</h3>
+</div>
+<div>
+    <ng-template #answerTwo>
+        <h3>Hi All, This is also Component Directive</h3>
+    </ng-template>
+</div>
+
+
+<h1>Demo Of Component Directives</h1>
+<h2>ngFor example</h2>
+<h3>
+    <ol type="i">
+        <li *ngFor="let str of flowerList">
+            {{str}}
+        </li>
+    </ol>
+</h3>
+
+
+
+
+<div align="center"> 
+    <h2> Demo of ngFor from array</h2>
+    <h3>
+    <table border="2" cellspacing="0px" cellpadding="20px"> 
+     <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Dept</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeArr">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.dept}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </h3>
+    </div>
+<hr size="5" color="blue">
+<div align="center"> 
+    <h2> Demo of ngFor from array</h2>
+    <h3>
+    <table border="2" cellspacing="0px" cellpadding="20px"> 
+     <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Dept</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeeArr; trackBy:trackByMyData">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.dept}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </h3>
+    </div>
+
+    <div align="center"> 
+        <h2> Demo of ngSwitch </h2>
+        <h3>
+        <ul [ngSwitch]="mathOperator"> 
+          <li *ngSwitchCase="'+'"> 
+             <p>{{mathOperator}} -- It is Addition </p> 
+          </li>
+          <li *ngSwitchCase="'-'"> 
+            <p>{{mathOperator}} -- It is Substraction</p> 
+         </li> 
+         <li *ngSwitchCase="'x'"> 
+            <p>{{mathOperator}} -- It is Multiplication</p> 
+         </li>
+         <li *ngSwitchCase="'/'"> 
+            <p>{{mathOperator}} -- It is Division</p> 
+         </li> 
+         <li *ngSwitchDefault> 
+            <p>{{mathOperator}} -- It is Wrong Math Operator</p> 
+         </li>
+        </ul>
+    </h3>
+    </div>
